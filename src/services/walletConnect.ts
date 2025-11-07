@@ -1,4 +1,4 @@
-import type { UniversalProvider } from '@walletconnect/universal-provider';
+import { UniversalProvider } from '@walletconnect/universal-provider';
 import { EthersProvider } from '@walletconnect/ethers-provider';
 import { ethers } from 'ethers';
 
@@ -7,8 +7,7 @@ class WalletConnectService {
   private ethersProvider: ethers.BrowserProvider | null = null;
   private signer: ethers.JsonRpcSigner | null = null;
   private accounts: string[] = [];
-
-  // Configuração do projeto WalletConnect - você precisa criar em https://cloud.walletconnect.com/
+ 
   private readonly projectId = 'YOUR_WALLETCONNECT_PROJECT_ID';
   private readonly metadata = {
     name: 'Angel Requests',
